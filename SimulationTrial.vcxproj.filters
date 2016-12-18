@@ -117,6 +117,9 @@
     <ClCompile Include="Config\GUIConf.c">
       <Filter>Config</Filter>
     </ClCompile>
+    <ClCompile Include="..\uCOSProject\Software\User\hmi\stat_bar.c">
+      <Filter>MyApp</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application\GUIDEMO.H">

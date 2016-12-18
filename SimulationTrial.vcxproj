@@ -139,6 +139,7 @@
   <ItemGroup>
     <ClCompile Include="..\uCOSProject\Software\User\hmi\hmi.c" />
     <ClCompile Include="..\uCOSProject\Software\User\hmi\menu.c" />
+    <ClCompile Include="..\uCOSProject\Software\User\hmi\stat_bar.c" />
     <ClCompile Include="Application\GUIDEMO.c" />
     <ClCompile Include="Application\GUIDEMO_AntialiasedText.c" />
     <ClCompile Include="Application\GUIDEMO_Automotive.c" />
