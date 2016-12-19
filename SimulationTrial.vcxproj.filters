@@ -22,6 +22,12 @@
     <Filter Include="MyApp">
       <UniqueIdentifier>{5b1c51de-480f-4e6c-808f-f27f5d5f6ea8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MyRes">
+      <UniqueIdentifier>{5916ff2b-6909-44cc-ba48-99da0bc66e56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MyPNG">
+      <UniqueIdentifier>{249a1af4-9375-4e15-9596-488219132df8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application\GUIDEMO.c">
@@ -119,6 +125,93 @@
     </ClCompile>
     <ClCompile Include="..\uCOSProject\Software\User\hmi\stat_bar.c">
       <Filter>MyApp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uCOSProject\Software\User\hmi\resource\res.c">
+      <Filter>MyRes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uCOSProject\Software\STemWin\png\adler32.c">
+      <Filter>MyPNG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uCOSProject\Software\STemWin\png\compress.c">
+      <Filter>MyPNG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uCOSProject\Software\STemWin\png\crc32.c">
+      <Filter>MyPNG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uCOSProject\Software\STemWin\png\deflate.c">
+      <Filter>MyPNG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uCOSProject\Software\STemWin\png\GUI_PNG.c">
+      <Filter>MyPNG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uCOSProject\Software\STemWin\png\IMAGE_PNG.c">
+      <Filter>MyPNG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uCOSProject\Software\STemWin\png\infback.c">
+      <Filter>MyPNG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uCOSProject\Software\STemWin\png\inffast.c">
+      <Filter>MyPNG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uCOSProject\Software\STemWin\png\inflate.c">
+      <Filter>MyPNG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uCOSProject\Software\STemWin\png\inftrees.c">
+      <Filter>MyPNG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uCOSProject\Software\STemWin\png\png.c">
+      <Filter>MyPNG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uCOSProject\Software\STemWin\png\pngerror.c">
+      <Filter>MyPNG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uCOSProject\Software\STemWin\png\pngget.c">
+      <Filter>MyPNG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uCOSProject\Software\STemWin\png\pngmem.c">
+      <Filter>MyPNG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uCOSProject\Software\STemWin\png\pngpread.c">
+      <Filter>MyPNG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uCOSProject\Software\STemWin\png\pngread.c">
+      <Filter>MyPNG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uCOSProject\Software\STemWin\png\pngrio.c">
+      <Filter>MyPNG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uCOSProject\Software\STemWin\png\pngrtran.c">
+      <Filter>MyPNG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uCOSProject\Software\STemWin\png\pngrutil.c">
+      <Filter>MyPNG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uCOSProject\Software\STemWin\png\pngset.c">
+      <Filter>MyPNG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uCOSProject\Software\STemWin\png\pngtrans.c">
+      <Filter>MyPNG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uCOSProject\Software\STemWin\png\pngwio.c">
+      <Filter>MyPNG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uCOSProject\Software\STemWin\png\pngwrite.c">
+      <Filter>MyPNG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uCOSProject\Software\STemWin\png\pngwtran.c">
+      <Filter>MyPNG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uCOSProject\Software\STemWin\png\pngwutil.c">
+      <Filter>MyPNG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uCOSProject\Software\STemWin\png\trees.c">
+      <Filter>MyPNG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uCOSProject\Software\STemWin\png\uncompr.c">
+      <Filter>MyPNG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\uCOSProject\Software\STemWin\png\zutil.c">
+      <Filter>MyPNG</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -301,6 +394,63 @@
     </ClInclude>
     <ClInclude Include="Config\GUIConf.h">
       <Filter>Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uCOSProject\Software\User\hmi\resource\res.h">
+      <Filter>MyRes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uCOSProject\Software\STemWin\png\crc32.h">
+      <Filter>MyPNG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uCOSProject\Software\STemWin\png\deflate.h">
+      <Filter>MyPNG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uCOSProject\Software\STemWin\png\GUI_PNG_Private.h">
+      <Filter>MyPNG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uCOSProject\Software\STemWin\png\inffast.h">
+      <Filter>MyPNG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uCOSProject\Software\STemWin\png\inffixed.h">
+      <Filter>MyPNG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uCOSProject\Software\STemWin\png\inflate.h">
+      <Filter>MyPNG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uCOSProject\Software\STemWin\png\inftrees.h">
+      <Filter>MyPNG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uCOSProject\Software\STemWin\png\png.h">
+      <Filter>MyPNG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uCOSProject\Software\STemWin\png\pngconf.h">
+      <Filter>MyPNG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uCOSProject\Software\STemWin\png\pngdebug.h">
+      <Filter>MyPNG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uCOSProject\Software\STemWin\png\pnginfo.h">
+      <Filter>MyPNG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uCOSProject\Software\STemWin\png\pnglibconf.h">
+      <Filter>MyPNG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uCOSProject\Software\STemWin\png\pngpriv.h">
+      <Filter>MyPNG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uCOSProject\Software\STemWin\png\pngstruct.h">
+      <Filter>MyPNG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uCOSProject\Software\STemWin\png\trees.h">
+      <Filter>MyPNG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uCOSProject\Software\STemWin\png\zconf.h">
+      <Filter>MyPNG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uCOSProject\Software\STemWin\png\zlib.h">
+      <Filter>MyPNG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\uCOSProject\Software\STemWin\png\zutil.h">
+      <Filter>MyPNG</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -1,2 +1,3 @@
 
-Not enough memory available.
+FRAMEWIN.c:
+Wrong handle type or Object not init'ed in FRAMEWIN_LockH()
