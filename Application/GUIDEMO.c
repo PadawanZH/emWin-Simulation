@@ -1031,68 +1031,68 @@ int GUIDEMO_GetTitleSizeY(void) {
 *       GUIDEMO_Main
 */
 void GUIDEMO_Main(void) {
-  #if GUI_WINSUPPORT
-    FRAMEWIN_SKINFLEX_PROPS Framewin_Props;
-  #endif
-  #if GUIDEMO_USE_AUTO_BK
-    U32                     NumFreeBytes;
-    int                     BitsPerPixel;
-  #endif
+  //#if GUI_WINSUPPORT
+  //  FRAMEWIN_SKINFLEX_PROPS Framewin_Props;
+  //#endif
+  //#if GUIDEMO_USE_AUTO_BK
+  //  U32                     NumFreeBytes;
+  //  int                     BitsPerPixel;
+  //#endif
   
   //
   // Check if recommended memory for the sample is available
   //
-  if (GUI_ALLOC_GetNumFreeBytes() < RECOMMENDED_MEMORY) {
-    GUI_ErrorOut("Not enough memory available."); 
-    return;
-  }
-  #if GUI_SUPPORT_MEMDEV
-    GUI_MEMDEV_SetAnimationCallback(_cbEffect, (void *)&_Pressed);
-  #endif
-  #if GUI_WINSUPPORT
-    WM_SetCallback(WM_HBKWIN, _cbBk);
-    BUTTON_SetReactOnLevel();
-    FRAMEWIN_GetSkinFlexProps(&Framewin_Props, FRAMEWIN_SKINFLEX_PI_ACTIVE);
-    Framewin_Props.Radius = 0;
-    FRAMEWIN_SetSkinFlexProps(&Framewin_Props, FRAMEWIN_SKINFLEX_PI_ACTIVE);
-    FRAMEWIN_GetSkinFlexProps(&Framewin_Props, FRAMEWIN_SKINFLEX_PI_INACTIVE);
-    Framewin_Props.Radius = 0;
-    FRAMEWIN_SetSkinFlexProps(&Framewin_Props, FRAMEWIN_SKINFLEX_PI_INACTIVE);
-    FRAMEWIN_SetDefaultSkin  (_FrameDrawSkinFlex);
-    PROGBAR_SetDefaultSkin   (PROGBAR_SKIN_FLEX);
-    BUTTON_SetDefaultSkin    (BUTTON_SKIN_FLEX);
-    SCROLLBAR_SetDefaultSkin (SCROLLBAR_SKIN_FLEX);
-    SLIDER_SetDefaultSkin    (SLIDER_SKIN_FLEX);
-    HEADER_SetDefaultSkin    (HEADER_SKIN_FLEX);
-  #endif
-  GUI_SetTextMode(GUI_TM_TRANS);
-  GUIDEMO_Config(&_GUIDemoConfig);
-  #if GUIDEMO_USE_VNC
-    if (GUIDEMO_GetConfFlag(GUIDEMO_CF_USE_VNC)) {
-      _GUIDemoConfig.pGUI_VNC_X_StartServer(0, 0);
-    }
-  #endif
-  #if GUIDEMO_USE_AUTO_BK
-    //
-    // Determine if HW has enough memory to draw the gradient circle as background
-    //
-    BitsPerPixel = LCD_GetBitsPerPixel();
-    if ((BitsPerPixel >= 16) && GUIDEMO_GetConfFlag(GUIDEMO_CF_USE_AUTO_BK)) {
-      NumFreeBytes = GUI_ALLOC_GetNumFreeBytes();
-      if (NumFreeBytes > NUMBYTES_NEEDED) {
-        #if GUI_SUPPORT_MEMDEV
-          _pfDrawBk = _DrawBkCircle;
-        #else
-          _pfDrawBk = _DrawBk;
-        #endif
-      } else {
-        _pfDrawBk = _DrawBk;
-      }
-    } else
-  #endif
-    {
-      _pfDrawBk = _DrawBkSimple;
-    }
+  //if (GUI_ALLOC_GetNumFreeBytes() < RECOMMENDED_MEMORY) {
+  //  GUI_ErrorOut("Not enough memory available."); 
+  //  return;
+  //}
+  //#if GUI_SUPPORT_MEMDEV
+  //  GUI_MEMDEV_SetAnimationCallback(_cbEffect, (void *)&_Pressed);
+  //#endif
+  //#if GUI_WINSUPPORT
+  //  WM_SetCallback(WM_HBKWIN, _cbBk);
+  //  BUTTON_SetReactOnLevel();
+  //  FRAMEWIN_GetSkinFlexProps(&Framewin_Props, FRAMEWIN_SKINFLEX_PI_ACTIVE);
+  //  Framewin_Props.Radius = 0;
+  //  FRAMEWIN_SetSkinFlexProps(&Framewin_Props, FRAMEWIN_SKINFLEX_PI_ACTIVE);
+  //  FRAMEWIN_GetSkinFlexProps(&Framewin_Props, FRAMEWIN_SKINFLEX_PI_INACTIVE);
+  //  Framewin_Props.Radius = 0;
+  //  FRAMEWIN_SetSkinFlexProps(&Framewin_Props, FRAMEWIN_SKINFLEX_PI_INACTIVE);
+  //  FRAMEWIN_SetDefaultSkin  (_FrameDrawSkinFlex);
+  //  PROGBAR_SetDefaultSkin   (PROGBAR_SKIN_FLEX);
+  //  BUTTON_SetDefaultSkin    (BUTTON_SKIN_FLEX);
+  //  SCROLLBAR_SetDefaultSkin (SCROLLBAR_SKIN_FLEX);
+  //  SLIDER_SetDefaultSkin    (SLIDER_SKIN_FLEX);
+  //  HEADER_SetDefaultSkin    (HEADER_SKIN_FLEX);
+  //#endif
+  //GUI_SetTextMode(GUI_TM_TRANS);
+  //GUIDEMO_Config(&_GUIDemoConfig);
+  //#if GUIDEMO_USE_VNC
+  //  if (GUIDEMO_GetConfFlag(GUIDEMO_CF_USE_VNC)) {
+  //    _GUIDemoConfig.pGUI_VNC_X_StartServer(0, 0);
+  //  }
+  //#endif
+  //#if GUIDEMO_USE_AUTO_BK
+  //  //
+  //  // Determine if HW has enough memory to draw the gradient circle as background
+  //  //
+  //  BitsPerPixel = LCD_GetBitsPerPixel();
+  //  if ((BitsPerPixel >= 16) && GUIDEMO_GetConfFlag(GUIDEMO_CF_USE_AUTO_BK)) {
+  //    NumFreeBytes = GUI_ALLOC_GetNumFreeBytes();
+  //    if (NumFreeBytes > NUMBYTES_NEEDED) {
+  //      #if GUI_SUPPORT_MEMDEV
+  //        _pfDrawBk = _DrawBkCircle;
+  //      #else
+  //        _pfDrawBk = _DrawBk;
+  //      #endif
+  //    } else {
+  //      _pfDrawBk = _DrawBk;
+  //    }
+  //  } else
+  //#endif
+  //  {
+  //    _pfDrawBk = _DrawBkSimple;
+  //  }
   while (1) {
 	  //_Main();
 	  PageMainTask();

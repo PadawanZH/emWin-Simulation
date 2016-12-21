@@ -165,6 +165,7 @@
     <ClCompile Include="..\uCOSProject\Software\STemWin\png\trees.c" />
     <ClCompile Include="..\uCOSProject\Software\STemWin\png\uncompr.c" />
     <ClCompile Include="..\uCOSProject\Software\STemWin\png\zutil.c" />
+    <ClCompile Include="..\uCOSProject\Software\User\hmi\about.c" />
     <ClCompile Include="..\uCOSProject\Software\User\hmi\hmi.c" />
     <ClCompile Include="..\uCOSProject\Software\User\hmi\menu.c" />
     <ClCompile Include="..\uCOSProject\Software\User\hmi\resource\res.c" />

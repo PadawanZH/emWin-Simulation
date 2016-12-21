@@ -213,6 +213,9 @@
     <ClCompile Include="..\uCOSProject\Software\STemWin\png\zutil.c">
       <Filter>MyPNG</Filter>
     </ClCompile>
+    <ClCompile Include="..\uCOSProject\Software\User\hmi\about.c">
+      <Filter>MyApp</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application\GUIDEMO.H">
